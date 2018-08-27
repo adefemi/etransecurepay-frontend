@@ -1,0 +1,27 @@
+.pagination{
+  display: flex;
+  margin: 30px 0;
+  li{
+    padding: 10px 15px;
+    font-weight: bold;
+    background-color: white;
+    border-right: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:hover{
+      background-color: $mainColor;
+    }
+  }
+
+  li.disabled{
+    cursor: not-allowed;
+    background-color: darken($white, 30%);
+  }
+
+  li.active{
+    cursor: default;
+    background-color: darken($white, 15%);
+  }
+}

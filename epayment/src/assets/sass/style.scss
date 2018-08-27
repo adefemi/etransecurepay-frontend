@@ -1,0 +1,18 @@
+@import "./variable";
+@import "./controller";
+@import "./common";
+@import "./main";
+@import "./account";
+
+
+
+
+.switch-wrapper {
+  position: relative;
+  width: 100%
+}
+
+.switch-wrapper > div {
+  position: absolute;
+  width: 100%;
+}

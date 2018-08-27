@@ -1,0 +1,21 @@
+@import "./variable";
+@import "./controller";
+@import "./common";
+@import "./main";
+@import "./account";
+@import "./extras/navbar";
+@import "./extras/pagination";
+@import "./extras/deletecontrol";
+
+
+
+
+.switch-wrapper {
+  position: relative;
+  width: 100%
+}
+
+.switch-wrapper > div {
+  position: absolute;
+  width: 100%;
+}

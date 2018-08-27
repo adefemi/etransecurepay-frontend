@@ -1,0 +1,273 @@
+.account-wrapper{
+  background-color: darken(white, 10%);
+}
+
+.account-header{
+  min-height: 120px;
+  background-color: $mainColor;
+  padding: 0 20px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 5px 1px rgba(0,0,0,0.3);
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    align-items: center;
+    max-width: 1200px;
+    min-width: 300px;
+    margin: 0 auto;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+
+  .navbrand{
+    font-size: 36px;
+    color: $subColor;
+    font-family: $headerFont;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  .navright{
+    padding: 10px;
+    button{
+      padding: 0;
+      border: none;
+      position: relative;
+      overflow: visible;
+      svg{
+        transform: translateY(25%);
+      }
+      &:hover{
+        background-color: transparent;
+      }
+      .dropdown{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        width: 150px;
+        background-color: white;
+        box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+        color: darken(white, 70%);
+        border-radius: 6px;
+        overflow: hidden;
+        transform-origin: top right;
+        transform: scale(0);
+        transition: all 300ms ease;
+
+        ol{
+          padding: 15px;
+          font-size: 14px;
+          text-transform: capitalize;
+          text-align: left;
+          transition: all 400ms ease;
+
+          &:hover{
+            background-color: darken(white, 5%);
+          }
+        }
+      }
+      &:focus{
+        .dropdown{
+          transform: scale(1);
+        }
+      }
+    }
+    li{
+      font-size: 16px;
+      font-weight: 600;
+
+      input{
+        color: $subColor;
+        font-size: 25px;
+        background-color: transparent;
+        border: none;
+        max-width: 200px;
+      }
+
+      @media screen and (max-width: 600px){
+        font-size: 3vw;
+        span{
+          font-size: 5vw;
+        }
+      }
+    }
+  }
+}
+
+.account-title{
+  background-color: white;
+  padding: 0 10px;
+  margin-bottom: 30px;
+
+  .content{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 20px 0;
+    color: darken(white, 70%);
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    button{
+      margin: 0;
+      border-color: black;
+      color: black;
+      background-color: transparent;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover{
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+  @media screen and (max-width: 600px){
+    .content{
+      font-size: 5vw;
+      margin-right: 20px;
+    }
+    button{
+      font-size: 3vw;
+      padding: 3vw 4vw;
+    }
+  }
+}
+
+.account-main{
+  width: 100%;
+  max-width: 1200px;
+  min-width: 300px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  h3{
+    padding: 15px 10px;
+    font-size: 16px;
+    color: $mainColor;
+    background-color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+  }
+}
+
+.account-control{
+  display: flex;
+  flex-wrap: wrap;
+
+  .account-brief{
+    width: 100%;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 0 10px;
+    margin-bottom: 30px;
+
+
+
+    ul{
+      background-color: white;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+      padding: 20px 0;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-top: 3px solid $mainColor;
+      li{
+        padding: 20px 10px;
+        border-bottom: 1px solid darken(white, 5%);
+
+        &:last-child{
+          border-bottom: none;
+        }
+
+        label{
+          font-size: 13px;
+          color: $mainColor;
+          display: block;
+        }
+        .content{
+          font-size: 20px;
+          font-family: $headerFont;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+
+          .status{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+          .status.success{
+            background-color: green;
+          }
+        }
+
+
+      }
+    }
+  }
+  .banking-details{
+    flex: 1;
+    margin: 0 10px;
+    margin-bottom: 30px;
+
+    .account-item{
+      margin-bottom: 20px;
+      background-color: white;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+      padding: 20px 0;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-top: 3px solid $mainColor;
+
+      .title{
+        margin-left: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: $mainColor;
+      }
+
+      .content{
+        li{
+          padding: 20px;
+          border-bottom: 1px solid darken(white, 5%);
+
+          &:last-child{
+            border-bottom: none;
+          }
+
+          label{
+            font-size: 13px;
+            color: $mainColor;
+            display: block;
+            margin-bottom: 10px;
+          }
+          input{
+            font-size: 20px;
+            font-family: $headerFont;
+            font-weight: bold;
+            background-color: transparent;
+            border: none;
+            color: black;
+          }
+
+        }
+      }
+    }
+  }
+}
+
